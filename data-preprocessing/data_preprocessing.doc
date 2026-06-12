@@ -1,0 +1,142 @@
+# 1. Import dataset
+# 2. Check null values
+# 3. Handle missing values
+# 4. Encode categorical variables
+# 5. Split X and y
+# 6. Train Test Split
+# 7. Feature Scaling
+# 8. Build ML model
+
+
+RAW DATA
+│
+├── 1. Load Data
+│   │
+│   ├── pandas.read_csv()
+│   ├── pandas.read_excel()
+│   ├── pandas.read_json()
+│   └── pandas.DataFrame()
+│
+├── 2. Data Understanding (EDA)
+│   │
+│   ├── df.head()
+│   ├── df.tail()
+│   ├── df.info()
+│   ├── df.describe()
+│   ├── df.shape
+│   ├── df.columns
+│   └── df.dtypes
+│
+├── 3. Handle Missing Values
+│   │
+│   ├── df.isnull()
+│   ├── df.isnull().sum()
+│   ├── df.dropna()
+│   │
+│   └── sklearn.impute
+│       ├── SimpleImputer
+│       ├── KNNImputer
+│       └── IterativeImputer
+│
+├── 4. Remove Duplicates
+│   │
+│   ├── df.duplicated()
+│   └── df.drop_duplicates()
+│
+├── 5. Handle Outliers
+│   │
+│   ├── IQR Method
+│   ├── Z-Score
+│   ├── IsolationForest
+│   └── LocalOutlierFactor
+│
+├── 6. Feature Selection
+│   │
+│   ├── SelectKBest
+│   ├── VarianceThreshold
+│   ├── RFE
+│   ├── RFECV
+│   └── SelectFromModel
+│
+├── 7. Encode Categorical Variables
+│   │
+│   ├── LabelEncoder
+│   ├── OrdinalEncoder
+│   ├── OneHotEncoder
+│   └── ColumnTransformer
+│
+├── 8. Feature Scaling
+│   │
+│   ├── StandardScaler
+│   ├── MinMaxScaler
+│   ├── RobustScaler
+│   ├── MaxAbsScaler
+│   └── Normalizer
+│
+├── 9. Feature Engineering
+│   │
+│   ├── PolynomialFeatures
+│   ├── Custom Features
+│   ├── Datetime Features
+│   ├── Interaction Features
+│   └── Domain Features
+│
+├── 10. Dimensionality Reduction
+│   │
+│   ├── PCA
+│   ├── KernelPCA
+│   ├── ICA
+│   ├── t-SNE
+│   └── UMAP
+│
+├── 11. Split Dataset
+│   │
+│   ├── train_test_split()
+│   ├── StratifiedKFold
+│   ├── KFold
+│   └── GroupKFold
+│
+├── 12. Build Preprocessing Pipeline
+│   │
+│   ├── Pipeline
+│   ├── ColumnTransformer
+│   └── make_pipeline
+│
+└── MACHINE LEARNING MODEL
+    │
+    ├── Classification
+    ├── Regression
+    ├── Clustering
+    └── Deep Learning
+
+
+Typical Supervised Learning Flow
+CSV File
+    ↓
+pandas.read_csv()
+    ↓
+DataFrame
+    ↓
+Check Missing Values
+    ↓
+SimpleImputer
+    ↓
+Encode Categories
+    ↓
+OneHotEncoder
+    ↓
+Scale Features
+    ↓
+StandardScaler
+    ↓
+Train/Test Split
+    ↓
+train_test_split()
+    ↓
+Model Training
+    ↓
+LinearRegression()
+RandomForest()
+XGBoost()
+    ↓
+Evaluation
