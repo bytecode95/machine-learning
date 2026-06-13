@@ -1,0 +1,70 @@
+What is Statistical Significance?
+
+Statistical significance is a measure used to determine whether the relationship between a feature and the target variable is likely real or occurred by chance. 
+In regression, we commonly use p-values. If the p-value is less than 0.05, the feature is considered statistically significant and contributes meaningfully to the model.
+
+A common interview statement is:
+
+"A statistically significant feature has a p-value less than 0.05, indicating strong evidence against the null hypothesis."
+
+Statistical significance tells us whether a result is real or happened by random chance.
+
+Null Hypothesis (H₀) --> Experience has NO effect on Salary
+Alternative Hypothesis (H₁) --> Experience DOES affect Salary
+p-value --> Probability of observing this result, if the Null Hypothesis is true
+
+
+Decision Rule
+
+Significance Level (α) = 0.05
+
+If p-value < 0.05 : Reject Null Hypothesis
+Feature is statistically significant ✅
+
+If p-value > 0.05 : Fail to Reject Null Hypothesis
+Feature is not statistically significant ❌
+
+
+Building a model - Feature Selection Methods
+
+Many Features
+      ↓
+Select Best Features
+      ↓
+Build Better Regression Model
+
+1. All-in - Use all available features.
+    Experience
+    Age
+    Education
+    Gender
+    Location
+
+2. Backward Elimination ⭐ Most Important - Start with ALL features. Build model.
+
+Check p-values.
+    | Feature    | p-value |
+    | ---------- | ------- |
+    | Experience | 0.001   |
+    | Age        | 0.60    | Age has highest p-value.
+    | Education  | 0.01    |
+    | Gender     | 0.03    |
+Remove Age.
+
+Rebuild model.
+
+3. Forward Selection - Opposite of Backward Elimination.
+    Start with NO features. Empty Model
+    Add the most significant feature first.
+        1. Experience
+        2. Experience + Education
+        3. Experience + Education + Gender
+    Keep adding until no improvement.
+    ✅ Faster when many features exist.
+
+4. Bidirectional Elimination - Combination of: Forward Selection + Backward Elimination
+
+    Add Features
+    Remove Features
+    Add Features
+    Remove Features

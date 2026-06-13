@@ -1,0 +1,72 @@
+What is a Categorical Variable?
+
+A feature containing text categories instead of numbers.| Gender |
+| ------ |  
+| Male   |
+| Female |
+
+| Country   |
+| --------- |
+| Sri Lanka |
+| India     |
+| USA       |
+
+
+Machine Learning algorithms cannot understand text values directly.
+
+So we convert them into numbers using Encoding.
+
+
+Independent Variable (X)
+        ↓
+OneHotEncoder
+
+Target Variable (y)
+        ↓
+LabelEncoder
+
+1. LabelEncoder
+2. OneHotEncoder
+3. ColumnTransformer
+
+| Module            | Purpose                                          |
+| ----------------- | ------------------------------------------------ |
+| LabelEncoder      | Convert target labels into numbers               |
+| OneHotEncoder     | Convert categorical features into binary columns |
+| ColumnTransformer | Apply transformations to selected columns        |
+| fit()             | Learn categories                                 |
+| transform()       | Convert data using learned categories            |
+| fit_transform()   | Learn + Convert                                  |
+
+
+Do we need Feature Scaling for Multiple Linear Regression?
+
+Answer:
+
+No. Multiple Linear Regression based on Ordinary Least Squares does not require feature scaling 
+because coefficients are calculated analytically and are not affected by feature magnitudes.
+| Algorithm                  | Scaling        |
+| -------------------------- | -------------- |
+| Linear Regression          | ❌ Not Required |
+| Multiple Linear Regression | ❌ Not Required |
+| Decision Tree              | ❌ Not Required |
+| Random Forest              | ❌ Not Required |
+| XGBoost                    | ❌ Not Required |
+| KNN                        | ✅ Required     |
+| K-Means                    | ✅ Required     |
+| SVM                        | ✅ Required     |
+| PCA                        | ✅ Required     |
+| Neural Networks            | ✅ Required     |
+
+
+If interviewer asks academically
+
+Answer:
+
+To avoid the Dummy Variable Trap, we should drop one dummy variable from each categorical feature. Backward Elimination can then be used to remove statistically insignificant variables based on p-values.
+
+If interviewer asks production ML
+
+Answer:
+
+In modern machine learning using Scikit-Learn, we rarely perform manual Backward Elimination. Instead, we rely on regularization methods such as Lasso, feature importance techniques, or tree-based models. Dummy Variable Trap is less of a concern for predictive modeling because modern libraries can handle redundant features.
