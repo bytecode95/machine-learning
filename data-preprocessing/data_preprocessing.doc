@@ -140,3 +140,23 @@ RandomForest()
 XGBoost()
     ↓
 Evaluation
+
+
+Training Data
+      ↓
+fit()
+      ↓
+Learn Mean & Std
+      ↓
+transform()
+      ↓
+Scaled Training Data
+
+
+Test Data
+      ↓
+transform()
+      ↓
+Use SAME Mean & Std
+      ↓
+Scaled Test Data
