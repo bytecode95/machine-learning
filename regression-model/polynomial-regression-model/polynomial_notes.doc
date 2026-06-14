@@ -1,0 +1,6 @@
+Why is Polynomial Regression still called "Linear Regression"?
+    Because the model remains linear with respect to the coefficients (b₀, b₁, b₂, ...), even though it is nonlinear with respect to the input feature X.
+
+Polynomial Regression is implemented in Scikit-Learn by first transforming the original feature into polynomial terms using PolynomialFeatures, 
+and then training a standard LinearRegression model on those transformed features. 
+This allows the model to learn nonlinear relationships while still remaining linear in its coefficients.
