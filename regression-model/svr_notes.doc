@@ -1,0 +1,63 @@
+SVR is the regression version of Support Vector Machine (SVM).
+
+Instead of finding a line that passes through every point, SVR tries to find a line (or curve) where most points fall within a certain acceptable error margin.
+
+If prediction is close enough,
+I don't care about the error.
+This acceptable region is called:
+        Epsilon Tube (ε)
+
+                 *
+      *
+
+------------------  Upper Boundary
+
+==================  Regression Line
+
+------------------  Lower Boundary
+
+            *
+   *
+
+Points inside the tube:
+    No penalty
+
+Points outside:
+    Penalty
+    Only the points outside or touching the boundary influence the model.
+    These points are called: Support Vectors
+
+Why is it Called Support Vector Regression?
+
+Because only the support vectors determine the regression function.
+
+Most data points do not directly affect the model.
+
+| Linear Regression     | SVR                           |
+| --------------------- | ----------------------------- |
+| Fits all points       | Uses support vectors          |
+| Minimizes total error | Ignores small errors inside ε |
+| Straight line         | Linear or nonlinear           |
+| Scaling optional      | Scaling required              |
+| Fast                  | Slower                        |
+
+Why is Feature Scaling mandatory?
+
+SVR is distance-based and sensitive to feature magnitudes, so features must be scaled before training.
+
+why feature scaling is most important for support vector regression?
+SVR is a distance-based algorithm.
+
+Feature scaling is important because SVR calculates:
+    Distances
+    Margins
+    Kernel Similarities
+If features have different scales, one feature dominates the distance calculation.
+
+
+What is Feature Scaling?
+
+Feature Scaling is the process of bringing all features to a similar range so that no feature dominates others because of its magnitude.
+
+when it comes to dependent variables you don't have to apply feature scaling when if it is already in the range. for a example if we already applied encoding category variable which label encoding 
+

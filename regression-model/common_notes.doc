@@ -70,3 +70,23 @@ If interviewer asks production ML
 Answer:
 
 In modern machine learning using Scikit-Learn, we rarely perform manual Backward Elimination. Instead, we rely on regularization methods such as Lasso, feature importance techniques, or tree-based models. Dummy Variable Trap is less of a concern for predictive modeling because modern libraries can handle redundant features.
+
+
+Interview Summary
+
+For this dataset, the most valuable analyses are:
+
+Missing Value Analysis
+Correlation Analysis
+Scatter Plot Analysis
+Outlier Detection
+Linear Regression Training
+Coefficient Interpretation
+R² Score
+RMSE / MAE
+Residual Analysis ⭐
+Statistical Significance (p-value) ⭐
+Confidence Intervals ⭐
+Linear vs Polynomial Comparison ⭐
+
+The last four (Residuals, p-values, Confidence Intervals, Polynomial Comparison) are the topics that most beginners skip, but interviewers often use them to distinguish stronger ML candidates.
