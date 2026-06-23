@@ -1,3 +1,37 @@
+Complete Data Preprocessing Pipeline🐍
+Raw Data
+    │
+    ▼
+Data Cleaning
+    │
+    ▼
+Missing Value Handling
+    │
+    ▼
+Categorical Encoding
+    │
+    ▼
+Feature Scaling
+    │
+    ▼
+Outlier Treatment
+    │
+    ▼
+Feature Selection
+    │
+    ▼
+Train-Test Split
+    │
+    ▼
+Model Training
+
+Do we need to  outlier handling before or after feature scaling?
+
+Outlier handling is generally performed before feature scaling because outliers can distort scaling techniques such as MinMaxScaler and StandardScaler. 
+Common outlier handling methods include removing outliers, capping extreme values, applying log transformations, or using robust machine learning models. 
+After treating outliers, feature scaling is applied to normalize the feature ranges for model training.
+
+
 What is a Categorical Variable?
 
 A feature containing text categories instead of numbers.| Gender |
